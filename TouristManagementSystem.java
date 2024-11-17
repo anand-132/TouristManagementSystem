@@ -1,6 +1,4 @@
 import java.util.*;
-
-// Base class for Tourist
 class Tourist {
     protected String name;
     protected int age;
@@ -19,7 +17,7 @@ class Tourist {
     }
 }
 
-// Derived class for DomesticTourist
+
 class DomesticTourist extends Tourist {
     private String state;
 
@@ -35,7 +33,7 @@ class DomesticTourist extends Tourist {
     }
 }
 
-// Derived class for InternationalTourist
+
 class InternationalTourist extends Tourist {
     private String country;
 
@@ -66,7 +64,7 @@ public class TouristManagementSystem {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();  // consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -89,13 +87,13 @@ public class TouristManagementSystem {
         scanner.close();
     }
 
-    // Method to add a Domestic Tourist
+    
     private static void addDomesticTourist(Scanner scanner) {
         System.out.print("Enter Name: ");
         String name = scanner.nextLine();
         System.out.print("Enter Age: ");
         int age = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine();  
         System.out.print("Enter Destination: ");
         String destination = scanner.nextLine();
         System.out.print("Enter State: ");
@@ -106,13 +104,13 @@ public class TouristManagementSystem {
         System.out.println("Domestic Tourist added successfully!");
     }
 
-    // Method to add an International Tourist
+    
     private static void addInternationalTourist(Scanner scanner) {
         System.out.print("Enter Name: ");
         String name = scanner.nextLine();
         System.out.print("Enter Age: ");
         int age = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine();  
         System.out.print("Enter Destination: ");
         String destination = scanner.nextLine();
         System.out.print("Enter Country: ");
@@ -123,7 +121,7 @@ public class TouristManagementSystem {
         System.out.println("International Tourist added successfully!");
     }
 
-    // Method to display all tourists
+    
     private static void displayAllTourists() {
         if (touristList.isEmpty()) {
             System.out.println("No tourists available.");
